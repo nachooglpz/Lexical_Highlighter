@@ -1,5 +1,54 @@
+// Main.java
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Person person = new Person("Alice", 25);
+        Car car = new Car("Toyota", "Corolla");
+        Calculator calculator = new Calculator();
+
+        System.out.println(person.getDetails());
+        System.out.println(car.getDetails());
+        System.out.println("Sum: " + calculator.add(5, 10));
+        System.out.println("Difference: " + calculator.subtract(10, 5));
+    }
+}
+
+// Person.java
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getDetails() {
+        return "Name: " + name + ", Age: " + age;
+    }
+}
+
+// Car.java
+class Car {
+    private String brand;
+    private String model;
+
+    public Car(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public String getDetails() {
+        return "Brand: " + brand + ", Model: " + model;
+    }
+}
+
+// Calculator.java
+class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
     }
 }

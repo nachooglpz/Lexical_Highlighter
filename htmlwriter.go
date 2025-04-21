@@ -32,19 +32,20 @@ func generateHTML(lines []string) string {
         .comment { color: darkgreen; }
         .unknown { color: gray; } 
     `)
-    htmlContent.WriteString("</style>\n</head>\n<body>\n")
+    htmlContent.WriteString("</style>\n</head>\n<body>\n<pre>")
 
     // Build body
     for _, line := range lines {
         tokens := getTokensFromLine(line)
         for _, token := range tokens {
+            //fmt.Println(tokenToHTML(token))
             htmlContent.WriteString(tokenToHTML(token))
         }
         htmlContent.WriteString("<br>\n") // New line for each line of code
     }
 
     // Close the HTML tags
-    htmlContent.WriteString("</body>\n</html>")
+    htmlContent.WriteString("</pre>\n</body>\n</html>")
     
     return htmlContent.String()
 }
