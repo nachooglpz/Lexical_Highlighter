@@ -4,7 +4,7 @@ import "regexp"
 
 var tokenPatterns = []TokenPattern{
 	{Comment, regexp.MustCompile(`\/\*[\s\S]*?\*\/|\/\/.*`)}, //Reference: https://regexr.com/3aeb7. DeanM
-	{Keyword, regexp.MustCompile(`\b(class|public|static|void|int|if|else|for|while|return|char|boolean|String)\b`)},
+	{Keyword, regexp.MustCompile(`\b(class|this|public|static|void|int|if|else|for|while|return|char|boolean|String)\b`)},
 	{String, regexp.MustCompile(`\"([^\\"]|\\.)*\"`)},
 	{Char, regexp.MustCompile(`\'([^\\']|\\.)*\'`)},
 	{Number, regexp.MustCompile(`\b\d+(\.\d+)?\b`)},

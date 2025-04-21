@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+
+        .keyword { color: blue; }
+        .string { color: green; }
+        .char { color: red; }
+        .number { color: purple; }
+        .operator { color: orange; }
+        .punctuation { color: brown; }
+        .whitespace { color: gray; }
+        .identifier { color: black; }
+        .comment { color: darkgreen; }
+        .unknown { color: gray; } 
+    </style>
+</head>
+<body>
+<pre><span class="comment">// Main.java</span><br>
+<span class="keyword">public</span><span class="whitespace"> </span><span class="keyword">class</span><span class="whitespace"> </span><span class="identifier">Main</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="keyword">static</span><span class="whitespace"> </span><span class="keyword">void</span><span class="whitespace"> </span><span class="identifier">main</span><span class="punctuation">(</span><span class="keyword">String</span><span class="punctuation">[</span><span class="punctuation">]</span><span class="whitespace"> </span><span class="identifier">args</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="identifier">Person</span><span class="whitespace"> </span><span class="identifier">person</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">new</span><span class="whitespace"> </span><span class="identifier">Person</span><span class="punctuation">(</span><span class="string">&#34;Alice&#34;</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="number">25</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="identifier">Car</span><span class="whitespace"> </span><span class="identifier">car</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">new</span><span class="whitespace"> </span><span class="identifier">Car</span><span class="punctuation">(</span><span class="string">&#34;Toyota&#34;</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="string">&#34;Corolla&#34;</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="identifier">Calculator</span><span class="whitespace"> </span><span class="identifier">calculator</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">new</span><span class="whitespace"> </span><span class="identifier">Calculator</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<br>
+<span class="whitespace">        </span><span class="identifier">System</span><span class="punctuation">.</span><span class="identifier">out</span><span class="punctuation">.</span><span class="identifier">println</span><span class="punctuation">(</span><span class="identifier">person</span><span class="punctuation">.</span><span class="identifier">getDetails</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="identifier">System</span><span class="punctuation">.</span><span class="identifier">out</span><span class="punctuation">.</span><span class="identifier">println</span><span class="punctuation">(</span><span class="identifier">car</span><span class="punctuation">.</span><span class="identifier">getDetails</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="identifier">System</span><span class="punctuation">.</span><span class="identifier">out</span><span class="punctuation">.</span><span class="identifier">println</span><span class="punctuation">(</span><span class="string">&#34;Sum: &#34;</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">calculator</span><span class="punctuation">.</span><span class="identifier">add</span><span class="punctuation">(</span><span class="number">5</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="number">10</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="identifier">System</span><span class="punctuation">.</span><span class="identifier">out</span><span class="punctuation">.</span><span class="identifier">println</span><span class="punctuation">(</span><span class="string">&#34;Difference: &#34;</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">calculator</span><span class="punctuation">.</span><span class="identifier">subtract</span><span class="punctuation">(</span><span class="number">10</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<span class="punctuation">}</span><br>
+<br>
+<span class="comment">// Person.java</span><br>
+<span class="keyword">class</span><span class="whitespace"> </span><span class="identifier">Person</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">    </span><span class="identifier">private</span><span class="whitespace"> </span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">name</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="identifier">private</span><span class="whitespace"> </span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">age</span><span class="punctuation">;</span><br>
+<br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="identifier">Person</span><span class="punctuation">(</span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">name</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">age</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="keyword">this</span><span class="punctuation">.</span><span class="identifier">name</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">name</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="keyword">this</span><span class="punctuation">.</span><span class="identifier">age</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">age</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">getDetails</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="keyword">return</span><span class="whitespace"> </span><span class="string">&#34;Name: &#34;</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">name</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="string">&#34;, Age: &#34;</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">age</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<span class="punctuation">}</span><br>
+<br>
+<span class="comment">// Car.java</span><br>
+<span class="keyword">class</span><span class="whitespace"> </span><span class="identifier">Car</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">    </span><span class="identifier">private</span><span class="whitespace"> </span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">brand</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="identifier">private</span><span class="whitespace"> </span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">model</span><span class="punctuation">;</span><br>
+<br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="identifier">Car</span><span class="punctuation">(</span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">brand</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">model</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="keyword">this</span><span class="punctuation">.</span><span class="identifier">brand</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">brand</span><span class="punctuation">;</span><br>
+<span class="whitespace">        </span><span class="keyword">this</span><span class="punctuation">.</span><span class="identifier">model</span><span class="whitespace"> </span><span class="operator">=</span><span class="whitespace"> </span><span class="identifier">model</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="keyword">String</span><span class="whitespace"> </span><span class="identifier">getDetails</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="keyword">return</span><span class="whitespace"> </span><span class="string">&#34;Brand: &#34;</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">brand</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="string">&#34;, Model: &#34;</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">model</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<span class="punctuation">}</span><br>
+<br>
+<span class="comment">// Calculator.java</span><br>
+<span class="keyword">class</span><span class="whitespace"> </span><span class="identifier">Calculator</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">add</span><span class="punctuation">(</span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">a</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">b</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="keyword">return</span><span class="whitespace"> </span><span class="identifier">a</span><span class="whitespace"> </span><span class="operator">+</span><span class="whitespace"> </span><span class="identifier">b</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<br>
+<span class="whitespace">    </span><span class="keyword">public</span><span class="whitespace"> </span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">subtract</span><span class="punctuation">(</span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">a</span><span class="punctuation">,</span><span class="whitespace"> </span><span class="keyword">int</span><span class="whitespace"> </span><span class="identifier">b</span><span class="punctuation">)</span><span class="whitespace"> </span><span class="punctuation">{</span><br>
+<span class="whitespace">        </span><span class="keyword">return</span><span class="whitespace"> </span><span class="identifier">a</span><span class="whitespace"> </span><span class="operator">-</span><span class="whitespace"> </span><span class="identifier">b</span><span class="punctuation">;</span><br>
+<span class="whitespace">    </span><span class="punctuation">}</span><br>
+<span class="punctuation">}</span><br>
+</pre>
+</body>
+</html>
